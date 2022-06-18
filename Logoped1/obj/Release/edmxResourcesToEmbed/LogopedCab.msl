@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище LogopedCabModelContainer" CdmEntityContainer="LogopedCabEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="LogopedCabModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Raspisanies">
+      <EntityTypeMapping TypeName="LogopedCabModel.Raspisanie">
+        <MappingFragment StoreEntitySet="Raspisanie">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+          <ScalarProperty Name="Zagruzka" ColumnName="Zagruzka" />
+          <ScalarProperty Name="ThemeLesson" ColumnName="ThemeLesson" />
+          <ScalarProperty Name="StudentList" ColumnName="StudentList" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="IDTeacher" ColumnName="IDTeacher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RechevayKartas">
+      <EntityTypeMapping TypeName="LogopedCabModel.RechevayKarta">
+        <MappingFragment StoreEntitySet="RechevayKarta">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDTeacher" ColumnName="IDTeacher" />
+          <ScalarProperty Name="Zabolevanie" ColumnName="Zabolevanie" />
+          <ScalarProperty Name="RabProgramm_1_4_" ColumnName="RabProgramm(1-4)" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="DateIncoming" ColumnName="DateIncoming" />
+          <ScalarProperty Name="Sluh" ColumnName="Sluh" />
+          <ScalarProperty Name="Zrenie" ColumnName="Zrenie" />
+          <ScalarProperty Name="SocSreda" ColumnName="SocSreda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="LogopedCabModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="LogopedCabModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Parents" ColumnName="Parents" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="SredniyBal" ColumnName="SredniyBal" />
+          <ScalarProperty Name="IdTeacher" ColumnName="IdTeacher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="LogopedCabModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="LogopedCabModel.Teacher">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="LogopedCabModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
