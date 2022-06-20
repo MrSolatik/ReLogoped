@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Logoped1"
         mc:Ignorable="d"
-        Height="500" Width="900">
+        Height="960" Width="1980">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Новое расписание" Name="btnOpenFile" Style="{StaticResource EditBtn}" VerticalAlignment="Top" HorizontalAlignment="Right"
-                Click="btnOpenFile_Click" Width="165" Height="45" Margin="20 0 20 0" FontSize="12"/>
-            <Button Content="Сохранить расписание" Name="btnSaveFile" Style="{StaticResource EditBtn}" VerticalAlignment="Top" HorizontalAlignment="Right"
-                Click="btnSaveFile_Click" Width="165" Height="45" Margin="0 0 20 0" FontSize="12"/>
+            <Button Content="Новое расписание" Name="btnOpenFile" Style="{StaticResource EditBtn}" VerticalAlignment="Top"
+                Click="btnOpenFile_Click" Width="300" Height="75" Margin="20 0 20 0" FontSize="24"/>
+            <Button Content="Сохранить расписание" Name="btnSaveFile" Style="{StaticResource EditBtn}" VerticalAlignment="Top"
+                Click="btnSaveFile_Click" Width="300" Height="75" Margin="0 0 20 0" FontSize="24"/>
         </StackPanel>
-        <TextBox Name="txtEditor" Panel.ZIndex="-1" Margin="0,45,0,0"/>
+        <RichTextBox Name="txtEditor" Panel.ZIndex="-1" Grid.Row="1"/>
     </Grid>
 </Window>

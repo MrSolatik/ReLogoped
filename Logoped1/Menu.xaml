@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Logoped1"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="960" d:DesignWidth="1920"
       Title="Menu">
 
     <Grid>
@@ -32,21 +32,39 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <StackPanel VerticalAlignment="Center">
-            <TextBlock Text="Меню" Style="{StaticResource TextBlock1}" Width="140"/>
-            <TextBlock Text="навигации" Style="{StaticResource standartText}" Height="51" Width="126"/>
+        <StackPanel VerticalAlignment="Center" Grid.ColumnSpan="3" Height="150" Grid.Column="1" Margin="179,0,311,0">
+            <TextBlock Text="Меню" Style="{StaticResource TextBlock1}" Width="180" FontSize="60"/>
+            <TextBlock Text="навигации" Style="{StaticResource standartText}" Height="63" Width="300" FontSize="44"/>
         </StackPanel>
-        <StackPanel Orientation="Vertical" Grid.RowSpan="3" Grid.Row="1">
-            <Button Name="WordPage1" Style="{StaticResource EditBtn}" Content="Текстовый &#xD;&#xA;редактор" 
-                    Height="60" Margin="0 10 0 10" FontSize="12" Click="WordPage1_Click"/>
+        <StackPanel Orientation="Vertical" Grid.RowSpan="4" Margin="0,10,0,0">
+            <Button Name="WordPage1" Style="{StaticResource EditBtn}" Content="Текстовый &#xD;&#xA;редактор"
+                    Height="100" Margin="0 10 0 10" FontSize="20" Click="WordPage1_Click" Width="260"/>
             <Button Name="GoSecondPa" Style="{StaticResource EditBtn}" Content="Данные&#xD;&#xA;речевой карты"
-                    Height="60" Margin="0 10 0 10" FontSize="12" Click="GoSecondPa_Click"/>
-            <Button Style="{StaticResource EditBtn}" Name="NewTableBtn" Height="60" Margin="0 10 0 10"
-                    Click="NewTableBtn_Click" Content="Формирование&#xD;&#xA;расписания" FontSize="12"/>
-            <Button Name="GoRegistPage" Content="Окно регистрации" Style="{StaticResource EditBtn}"
-                    Height="60" Margin="0 10 0 10"/>
+                    Height="100" Margin="0 10 0 10" FontSize="20" Click="GoSecondPa_Click" Width="260"/>
+            <Button Style="{StaticResource EditBtn}" Name="NewTableBtn" Height="100" Margin="0 10 0 10" Width="260"
+                    Click="NewTableBtn_Click" Content="Формирование&#xD;&#xA;расписания" FontSize="20"/>
+            <Button Name="GoRegistPage" Content="Окно регистрации" Style="{StaticResource EditBtn}" FontSize="20"
+                    Height="100" Margin="0 10 0 10" Width="260" Click="GoRegistPage_Click"/>
+            <Button Name="GoAddpage" Style="{StaticResource EditBtn}" Width="260" Height="100" Margin="0 10 0 10" FontSize="20"
+                    Content="Добавить&#xD;&#xA;пользователя"/>
         </StackPanel>
-        <Button Name="InfoBtn" Style="{StaticResource EditBtn}" FontSize="12" Height="45" Width="110" Content="О программе" Margin="45,34,45,34" 
-                Grid.Column="3" Grid.Row="1" Click="InfoBtn_Click"/>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.RowSpan="3" Grid.Row="1"/>
+        <DataGrid Name="Somthing" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3"  AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="200" Header=""/>
+                <DataGridTextColumn Width="200" Header=""/>
+                <DataGridTextColumn Width="200" Header=""/>
+                <DataGridTextColumn Width="200" Header=""/>
+                <DataGridTextColumn Width="200" Header=""/>
+                <DataGridComboBoxColumn Width="200" Header="Выбор ученика"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Style="{StaticResource EditBtn}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Logoped1"
         mc:Ignorable="d"
-        Height="700" Width="1400" Icon="/логотип.jpg" WindowStartupLocation="CenterScreen">
+        Height="1080" Width="1920" Icon="/логотип.jpg" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Главный экран" Style="{StaticResource TextBlock1}" Width="240" VerticalAlignment="Center"/>
-        <Button Name="BtnBack" Content="Вернуться" Click="BtnBack_Click" Style="{StaticResource MainWindowBtn}" HorizontalAlignment="Right"/>
+        <TextBlock Text="Главный экран" Style="{StaticResource TextBlock1}" VerticalAlignment="Center" FontSize="44" Margin="840,0,700,0"/>
+        <Button Name="BtnBack" Content="Вернуться" Click="BtnBack_Click" Style="{StaticResource MainWindowBtn}" HorizontalAlignment="Left" FontSize="20" Margin="1630,10,0,10" Width="280"/>
 
-        <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered"/>
+        <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Width="auto"/>
         <Image Source="/Resources/логотип.jpg" Panel.ZIndex="-1" Grid.Row="1" HorizontalAlignment="Left"/>
     </Grid>
 </Window>
